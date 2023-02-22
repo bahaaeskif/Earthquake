@@ -15,7 +15,8 @@ const Navbar = () => {
                 <Link className="text-xl text-black " to='/' >Earth<span className=' text-sm'>Quake</span></Link>
             </div>
             <i className='bx bx-menu text-4xl relative  ' onClick={hundelClick}></i>
-            <div className={`sub-menu z-40 scale-up-center bg-gray-50 p-4 ${subMenu ? 'block' : 'hidden'}`}>
+            <div className={`sub-menu shadow-lg z-40 scale-up-center bg-gray-50 p-4 ${subMenu ? 'block' : 'hidden'}`}>
+                <div className='x'><i class='bx bx-x bx-rotate-90' onClick={hundelClick}></i></div>
                 <li className='py-3'>
                     <NavLink to='/'>معلومات الزلازل</NavLink>
                 </li>

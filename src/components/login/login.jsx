@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Input from "../common/input/input";
 const Login = () => {
     return (
-        <div className="login__container">
+        <div className="login__container flex-col justify-start">
+            <p className="text-xl mt-8 mb-8 text-center px-12">قم بتسجيل دخولك</p>
             <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm direction-rtl">
                 <form>
                     <div className="form-group mb-6">

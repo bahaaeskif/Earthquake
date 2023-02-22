@@ -10,6 +10,13 @@ nav {
     right: 0;
 }
 
+.sub-menu .x {
+    position: absolute;
+    top: 8px;
+    right: 27px;
+    font-size: 27px;
+}
+
 .sub-menu li {
     margin: 0;
     list-style: none;

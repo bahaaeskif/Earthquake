@@ -4,6 +4,8 @@ import './register.css'
 const Register = () => {
     return (
         <div className="register__container">
+            <p className="text-xl mt-8 mb-8 text-center px-12">قم بانشاء حساب جديد ودع الاخرين يرونك</p>
+
             <div className="block p-6 rounded-lg shadow-lg bg-white max-w-md direction-rtl ">
                 <form>
                     <div className="grid grid-cols-2 gap-4">
