@@ -1,0 +1,12 @@
+.erorr-page {
+    margin-top: -64px;
+}
+
+.erorr-page__content {
+    font-family: var(--font-family);
+
+}
+
+.btn {
+    font-family: var(--font-family);
+}
