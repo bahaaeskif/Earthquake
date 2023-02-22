@@ -1,0 +1,8 @@
+.earthquake__Feeds {
+    font-family: var(--font-family);
+}
+
+.earthquake__Feeds-badge {
+    font-family: var(--font-family);
+    direction: rtl;
+}

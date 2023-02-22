@@ -1,0 +1,12 @@
+.earthquake__EarthQuake-container {
+    font-family: var(--font-family);
+    min-height: 100vh;
+}
+
+.earthquake__EarthQuake-container_news {
+    direction: rtl;
+}
+
+.earthquake__EarthQuake-container_news .place {
+    direction: ltr;
+}

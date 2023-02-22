@@ -1,0 +1,4 @@
+.container__danger {
+    direction: rtl;
+    font-family: var(--font-family)
+}
