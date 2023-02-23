@@ -6,14 +6,9 @@ import Erorrpage from './components/errorpage/errorpage';
 import Register from './components/register/register';
 import Login from './components/login/login';
 import Followothers from './components/Followothers/Followothers';
+
+
 function App() {
-  var myString = 'syria';
-  var myWord = 'syria';
-  var myPattern = new RegExp('(\\w*' + myWord + '\\w*)', 'gi');
-  var matches = myString.match(myPattern);
-  console.log(matches);
-
-
   return <>
     <Routes>
       <Route path='/' element={<SharedLayout />}>

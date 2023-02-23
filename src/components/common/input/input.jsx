@@ -1,10 +1,17 @@
 import React from "react";
 
-const Input = ({ placeholder, label, type, isLabel }) => {
+
+
+const Input = ({ placeholder, label, type, isLabel, id, name, onChange, value }) => {
     return (
         <>
-            {isLabel ? <label htmlFor="exampleInputEmail2" className="form-label inline-block mb-2 text-gray-700">{label}</label> : null}
-            <input type={type} className="form-control
+            {isLabel ? <label htmlFor={id} className="form-label inline-block mb-2 text-gray-700">{label}</label> : null}
+            <input type={type}
+                value={value}
+                onChange={onChange}
+                name={name}
+                id={id}
+                className="form-control
         block
         w-full
         px-3
@@ -18,7 +25,7 @@ const Input = ({ placeholder, label, type, isLabel }) => {
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputEmail2"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-describedby="emailHelp" placeholder={placeholder} />
         </>
     );

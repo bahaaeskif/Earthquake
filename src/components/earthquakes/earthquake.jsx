@@ -10,7 +10,7 @@ import Alert from '../common/alert/alert';
 import Btnview from './btnview/btn';
 
 const EarthQuake = () => {
-
+    const [colorAlert, setColorAlert] = useState('text-green-700 bg-green-100');
     const [quakes, setQuakes] = useState([]);
 
     const [isAlertVisible, setIsAlertVisible] = useState(true);

@@ -4,8 +4,13 @@ import React from "react";
 
 const Spinner = () => {
     return (<div className=" spinner   flex justify-center items-center space-x-2" >
-        <div className="spinner-grow inline-block w-8 h-8 bg-current rounded-full opacity-0 text-blue-600" role="status" ></div >
-        <span className="visually-hidden" > Loading...</span >
+        <div
+            className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-blue-700 border-r-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            role="status">
+            <span
+                className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Loading...</span>
+        </div>
     </div >);
 }
 
