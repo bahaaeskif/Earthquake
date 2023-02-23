@@ -5,4 +5,20 @@
     height: 100vh;
     padding: 0 24px;
     font-family: var(--font-family);
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
+
+/* .register__container::after {
+    content: '';
+    background-image: url('../../imgs/bg-png.png');
+    background-size: contain;
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    filter: blur(1.2px);
+    -webkit-filter: blur(1.2px);
+} */

@@ -37,9 +37,10 @@ const Login = () => {
 
     return (
         <div className="login__container flex-col justify-start">
-            <p className="text-xl mt-8 mb-8 text-center px-12">قم بتسجيل دخولك</p>
-            <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm direction-rtl">
+
+            <div className="block mt-8 p-6 rounded-lg shadow-lg bg-white max-w-sm direction-rtl">
                 <form onSubmit={formik.handleSubmit}>
+                    <p className="text-xl mb-8 text-center px-12">قم بتسجيل دخولك</p>
                     <div className="form-group mb-6">
                         <Input type={'text'} label={'البريد الألكتروني'} placeholder={'ادخل البريد الألكتروني'}
                             isLabel={1} id={"email"} name={'email'} onChange={formik.handleChange} value={formik.values.email} />
