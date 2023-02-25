@@ -1,16 +1,19 @@
 import './earthquake.css'
 import { useEffect, useState } from 'react';
 
-import { calcTime } from '../../utilties/time';
+// FUNCTIONALLY
 import { styleBox } from '../../utilties/style';
-import Earthquakefeed from './earthQuakeFeed';
-import Spinner from '../common/spinner/spinner';
+import { calcTime } from '../../utilties/time';
 import http from '../../utilties/http';
+// common components
+import Spinner from '../common/spinner/spinner';
 import Alert from '../common/alert/alert';
 import Btnview from './btnview/btn';
 
+import Earthquakefeed from './earthQuakeFeed';
+
 const EarthQuake = () => {
-    const [colorAlert, setColorAlert] = useState('text-green-700 bg-green-100');
+
     const [quakes, setQuakes] = useState([]);
 
     const [isAlertVisible, setIsAlertVisible] = useState(true);
@@ -37,6 +40,7 @@ const EarthQuake = () => {
         isToggleview === false ? setIsToggleview(true) : setIsToggleview(false);
     }
     let quakesVar = quakes;
+
     quakesVar = isToggleview === true ? quakes.slice(0, 30) : quakes.slice(0, 20);
     return (
         <div className=' earthquake__EarthQuake-container p-5 pt-0'  >

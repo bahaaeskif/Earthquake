@@ -1,7 +1,6 @@
 import './followothers.css'
 import React from "react";
 import Input from '../common/input/input';
-import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup'
@@ -32,7 +31,7 @@ const Followothers = () => {
     });
     return (<div className=" px-5 container__danger   min-h-screen flex flex-col items-center pt-16">
         <div className='datiles__form mt-9' >
-            <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm direction-rtl">
+            <div className="block transition-down  p-6 rounded-lg shadow-lg bg-white max-w-sm direction-rtl">
                 <div className="flex justify-center">
                     <form className="mb-3 xl:w-96" onSubmit={formik.handleSubmit}>
                         <div className='flex items-center justify-center mb-5 px-3'>
@@ -53,8 +52,8 @@ const Followothers = () => {
                             <button type='submit' className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition mt-9  duration-150 ease-in-out'>لقد شعرت بهزة </button>
                         </div>
                     </form>
-                    {isloading && <Spinner />}
                 </div>
+                {isloading && <Spinner />}
 
             </div>
 

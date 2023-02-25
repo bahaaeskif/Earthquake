@@ -13,3 +13,18 @@
 :root {
     --font-family: 'Cairo', sans-serif;
 }
+
+.transition-down {
+    animation: login2 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes login2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}

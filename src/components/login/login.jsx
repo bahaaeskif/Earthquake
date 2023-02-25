@@ -30,7 +30,7 @@ const Login = () => {
             setTimeout(() => {
                 setIsLoading(false);
                 navigate('/');
-            }, 1500);
+            }, 4000000000000);
             setIsLoading(true);
         }
     });
@@ -38,7 +38,7 @@ const Login = () => {
     return (
         <div className="login__container flex-col justify-start">
 
-            <div className="block mt-8 p-6 rounded-lg shadow-lg bg-white max-w-sm direction-rtl">
+            <div className="block transition-down  mt-8 p-6 rounded-lg shadow-lg bg-white lg:w-96 direction-rtl">
                 <form onSubmit={formik.handleSubmit}>
                     <p className="text-xl mb-8 text-center px-12">قم بتسجيل دخولك</p>
                     <div className="form-group mb-6">
@@ -66,8 +66,8 @@ const Login = () => {
                     </p>
 
                 </form>
-                {isloading && <Spinner />}
             </div>
+            {isloading && <Spinner />}
         </div>
     );
 }

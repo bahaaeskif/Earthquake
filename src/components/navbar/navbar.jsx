@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import './navbar.css'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../imgs/logo.png'
+import Navmenu from './responsiveNav/navmenu';
+import Submenu from './responsiveNav/submenu';
 
 
 const Navbar = () => {
     const [subMenu, isSubMenu] = useState(false);
+
     const hundelClick = () => {
         subMenu === false ? isSubMenu(true) : isSubMenu(false);
+    }
+
+    const hundelCancel = () => {
+        isSubMenu(false);
     }
 
     return (<nav className=" z-50 relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
@@ -18,23 +25,11 @@ const Navbar = () => {
                     <div className='text-xl text-black '>Earth<span className=' text-sm'>Quake</span></div>
                 </Link>
             </div>
-            <i className='bx bx-menu text-4xl relative  ' onClick={hundelClick}></i>
-            <div className={`sub-menu shadow-lg z-40 scale-up-center bg-gray-50 p-4 ${subMenu ? 'block' : 'hidden'}`}>
-                <div className='x'><i className='bx bx-x bx-rotate-90' onClick={hundelClick}></i></div>
-                <li className='py-3'>
-                    <NavLink to='/'>معلومات الزلازل</NavLink>
-                </li>
-                <li className='py-3'>
-                    <NavLink to='/follow'>تتبع الاخرين</NavLink>
-                </li>
-                <li className='py-3'>
-                    <NavLink to='/login'>تسجيل دخول</NavLink>
-                </li>
-                <li className='py-3'>
-                    <NavLink to='/signup'>انشاء حساب</NavLink>
-                </li>
-            </div>
+            <i className='bx bx-menu text-4xl relative md:hidden lg:hidden  ' onClick={hundelClick}></i>
+            <Submenu hundelCancel={hundelCancel} hundelClick={hundelClick} subMenu={subMenu} />
+            <Navmenu hundelCancel={hundelCancel} />
         </div>
+
     </nav >);
 }
 

@@ -45,7 +45,7 @@ const Register = () => {
         <div className="register__container">
 
 
-            <div className="block p-6 mt-8 rounded-lg shadow-lg bg-white max-w-md direction-rtl ">
+            <div className="block p-6 mt-8 rounded-lg transition-down shadow-lg bg-white max-w-md direction-rtl ">
                 <form onSubmit={formik.handleSubmit}>
                     <p className="text-xl  mb-8 text-center px-10">قم بانشاء حساب جديد ودع الاخرين يرونك</p>
                     <div className="grid grid-cols-2 gap-4">
@@ -105,8 +105,8 @@ const Register = () => {
                     </div>
                     <ButtonSumit label={'انشاء حساب'} />
                 </form>
-                {isloading && <Spinner />}
             </div>
+            {isloading && <Spinner />}
         </div>
     );
 }
