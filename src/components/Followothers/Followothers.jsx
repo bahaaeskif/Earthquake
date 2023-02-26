@@ -23,7 +23,7 @@ const Followothers = () => {
             console.log(values)
             setTimeout(() => {
                 setIsLoading(false);
-                navigate('/follow/danger');
+                navigate('/follow/danger', { id: 7, color: 'green' });
             }, 1500);
             setIsLoading(true);
 
@@ -53,9 +53,9 @@ const Followothers = () => {
                         </div>
                     </form>
                 </div>
-                {isloading && <Spinner />}
 
             </div>
+            {isloading && <Spinner />}
 
         </div>
     </div>);

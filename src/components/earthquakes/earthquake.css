@@ -10,3 +10,8 @@
 .earthquake__EarthQuake-container_news .place {
     direction: ltr;
 }
+
+.select {
+    font-family: var(--font-family);
+    direction: rtl;
+}
