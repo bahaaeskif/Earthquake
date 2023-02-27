@@ -23,7 +23,7 @@ const Followothers = () => {
             console.log(values)
             setTimeout(() => {
                 setIsLoading(false);
-                navigate('/follow/danger', { id: 7, color: 'green' });
+                navigate(`/follow/save/${formik.values.location}`);
             }, 1500);
             setIsLoading(true);
 

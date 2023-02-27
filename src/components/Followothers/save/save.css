@@ -1,0 +1,5 @@
+.save__container {
+    font-family: var(--font-family);
+    min-height: 100vh;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}

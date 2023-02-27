@@ -12,9 +12,6 @@ import Btnview from './btnview/btn';
 
 import Earthquakefeed from './earthQuakeFeed';
 
-import { useFormik } from 'formik';
-import * as Yup from 'yup'
-
 import Select from 'react-select';
 
 const EarthQuake = () => {
@@ -33,8 +30,6 @@ const EarthQuake = () => {
     const [isToggleview, setIsToggleview] = useState(false);
 
     const [selectedOption, setSelectedOption] = useState({ value: 0, label: 'كل الزلازل' });
-
-    console.log(selectedOption);
 
     setTimeout(() => {
         setIsAlertVisible(false);
@@ -82,7 +77,7 @@ const EarthQuake = () => {
                     return <Earthquakefeed away={away} color={color} quake={quake} key={quake.earthquake_id} />
                 }) : <Spinner />}
                 {quakesVar.length >= 7 ? <Btnview hundelClick={hundelClick} isToggleview={isToggleview} /> : null}
-                {quakesVar.length === 0 && quakes.length > 0 ? <p className='text-center text-3xl text-gray-400 mt-8'>لايوجد أي بيانات عن نتائج البحث</p> : null}
+                {quakesVar.length === 0 && quakes.length > 0 ? <p className='text-center text-3xl text-gray-400 mt-8'>لايوجد أي بيانات عن فلترة البحث</p> : null}
             </div>
         </>
     );
