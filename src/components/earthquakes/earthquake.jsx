@@ -14,7 +14,7 @@ import Earthquakefeed from './earthQuakeFeed';
 
 import Select from 'react-select';
 
-const EarthQuake = () => {
+const EarthQuake = ({ quakes }) => {
 
     const options = [
         { value: 0, label: 'كل الزلازل' },
@@ -23,7 +23,7 @@ const EarthQuake = () => {
         { value: 4.5, label: 'الشدة أكثر من 4.5' },
     ];
 
-    const [quakes, setQuakes] = useState([]);
+
 
     const [isAlertVisible, setIsAlertVisible] = useState(true);
 
@@ -35,17 +35,7 @@ const EarthQuake = () => {
         setIsAlertVisible(false);
     }, 3000);
 
-    useEffect(() => {
-        const getData = async () => {
 
-            const { data } = await http.get("https://api.orhanaydogdu.com.tr/deprem/kandilli/live");
-
-            if (data.httpStatus === 200) {
-                setQuakes(data.result);
-            }
-        }
-        getData();
-    }, []);
 
     const hundelClick = () => {
         isToggleview === false ? setIsToggleview(true) : setIsToggleview(false);

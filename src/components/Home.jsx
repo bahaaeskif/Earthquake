@@ -2,11 +2,11 @@
 import Feeds from './feeds/feeds'
 import EarthQuake from './earthquakes/earthquake';
 
-const Home = () => {
+const Home = ({ quakes }) => {
     return (
         <>
             <Feeds />
-            <EarthQuake />
+            <EarthQuake quakes={quakes} />
         </>
     );
 }

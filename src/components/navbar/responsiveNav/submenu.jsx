@@ -15,6 +15,9 @@ const Submenu = ({ hundelCancel, hundelClick, subMenu }) => {
         <li className='py-3'>
             <NavLink to='/signup' onClick={hundelCancel}>انشاء حساب</NavLink>
         </li>
+        <li className='py-3'>
+            <NavLink to='/map' onClick={hundelCancel}>الزلازل على الخريطة</NavLink>
+        </li>
     </div>);
 }
 
