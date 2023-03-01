@@ -13,6 +13,7 @@ import Btnview from './btnview/btn';
 import Earthquakefeed from './earthQuakeFeed';
 
 import Select from 'react-select';
+import Mapsgoogle from '../mapMarker/map';
 
 const EarthQuake = ({ quakes }) => {
 
@@ -49,7 +50,7 @@ const EarthQuake = ({ quakes }) => {
     quakesVar = isToggleview === true ? quakesSagf.slice(0, 30) : quakesSagf.slice(0, 20);
     return (
         <>
-            <div className="select mt-3 px-5 py-2 ">
+            <div className="select mt-3 px-5 py-2 relative z-30 ">
                 <span className="mb-2 block">فلترة البحث</span>
                 <Select
                     defaultValue={selectedOption}
@@ -59,15 +60,20 @@ const EarthQuake = ({ quakes }) => {
                 />
             </div>
             <div className='earthquake__Feeds-badge px-5 mb-3 py-2'>آخر التحديثات</div>
-            <div className=' earthquake__EarthQuake-container p-5 pt-0'  >
-                {quakesVar.length !== 0 && isAlertVisible ? <Alert /> : null}
-                {quakes.length !== 0 ? quakesVar?.map((quake) => {
-                    let away = calcTime(quake);
-                    let color = styleBox(quake);
-                    return <Earthquakefeed away={away} color={color} quake={quake} key={quake.earthquake_id} />
-                }) : <Spinner />}
-                {quakesVar.length >= 7 ? <Btnview hundelClick={hundelClick} isToggleview={isToggleview} /> : null}
-                {quakesVar.length === 0 && quakes.length > 0 ? <p className='text-center text-3xl text-gray-400 mt-8'>لايوجد أي بيانات عن فلترة البحث</p> : null}
+            <div className='flex flex-row-reverse px-5 pb-5 gap-4'>
+                <div className=' earthquake__EarthQuake-container basis-1/2 grow'  >
+                    {quakesVar.length !== 0 && isAlertVisible ? <Alert /> : null}
+                    {quakes.length !== 0 ? quakesVar?.map((quake) => {
+                        let away = calcTime(quake);
+                        let color = styleBox(quake);
+                        return <Earthquakefeed away={away} color={color} quake={quake} key={quake.earthquake_id} />
+                    }) : <Spinner />}
+                    {quakesVar.length >= 7 ? <Btnview hundelClick={hundelClick} isToggleview={isToggleview} /> : null}
+                    {quakesVar.length === 0 && quakes.length > 0 ? <p className='text-center text-3xl text-gray-400 mt-8'>لايوجد أي بيانات عن فلترة البحث</p> : null}
+                </div>
+                {quakes.length !== 0 && <div className='w-full hidden lg:block' >
+                    <Mapsgoogle quakes={quakesVar} />
+                </div>}
             </div>
         </>
     );

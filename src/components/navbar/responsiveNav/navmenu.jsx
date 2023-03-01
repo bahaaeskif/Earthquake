@@ -16,7 +16,7 @@ const Navmenu = ({ hundelCancel }) => {
                 <li className='p-3'>
                     <NavLink to='/signup' onClick={hundelCancel}>انشاء حساب</NavLink>
                 </li>
-                <li className='py-3'>
+                <li className='py-3 hidden md:block lg:hidden'>
                     <NavLink to='/map' onClick={hundelCancel}>الزلازل على الخريطة</NavLink>
                 </li>
             </div>

@@ -10,14 +10,16 @@ const Submenu = ({ hundelCancel, hundelClick, subMenu }) => {
             <NavLink to='/follow' onClick={hundelCancel}>تتبع الاخرين</NavLink>
         </li>
         <li className='py-3'>
-            <NavLink to='/login' onClick={hundelCancel}>تسجيل دخول</NavLink>
+            <NavLink to='/map' onClick={hundelCancel}> الخريطة</NavLink>
         </li>
-        <li className='py-3'>
-            <NavLink to='/signup' onClick={hundelCancel}>انشاء حساب</NavLink>
-        </li>
-        <li className='py-3'>
-            <NavLink to='/map' onClick={hundelCancel}>الزلازل على الخريطة</NavLink>
-        </li>
+        <div className="flex justify-center items-center gap-2">
+            <li className='py-3 '>
+                <NavLink to='/login' onClick={hundelCancel}>تسجيل دخول</NavLink>
+            </li>
+            <li className='py-3 '>
+                <NavLink to='/signup' onClick={hundelCancel}>انشاء حساب</NavLink>
+            </li>
+        </div>
     </div>);
 }
 
