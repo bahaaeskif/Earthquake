@@ -3,3 +3,7 @@
     min-height: 100vh;
     background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
+
+.btn {
+    @apply rounded-full p-3 bg-slate-400 text-white font-p cursor-pointer tracking-wide;
+}

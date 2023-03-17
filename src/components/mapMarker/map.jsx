@@ -31,7 +31,7 @@ function Mapsgoogle({ quakes }) {
                 {MarkerEarth.map((AmarkerEarth) => {
                     let time = calcTime(AmarkerEarth);
 
-                    return <Marker position={AmarkerEarth.coordinates
+                    return <Marker position={AmarkerEarth.geojson.coordinates
                     } icon={iconPerson} key={AmarkerEarth.earthquake_id}>
                         <Popup>
                             <div className="map__container-datiles ">

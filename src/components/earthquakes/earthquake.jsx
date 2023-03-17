@@ -24,8 +24,6 @@ const EarthQuake = ({ quakes }) => {
         { value: 4.5, label: 'الشدة أكثر من 4.5' },
     ];
 
-
-
     const [isAlertVisible, setIsAlertVisible] = useState(true);
 
     const [isToggleview, setIsToggleview] = useState(false);

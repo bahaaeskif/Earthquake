@@ -8,6 +8,7 @@ import ButtonSumit from "../common/buttonsubmit/Buttonsubmit";
 import Spinner from "../common/spinner/spinner";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { register } from "../../utilties/userservice";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -31,7 +32,12 @@ const Register = () => {
                 .matches(/[a-zA-Z]/, 'يجب ان تحتوي على أحرف لاتينية فقط'),
             email: Yup.string().email('البريد الالكتروني غير صالح').required('يرجى ادخال بريدك الالكتروني'),
         }),
-        onSubmit: (values) => {
+        onSubmit: async (values) => {
+
+            await register(values);
+
+
+            console.log(await register(values));
             console.log(values);
             setTimeout(() => {
                 setIsLoading(false);
@@ -44,7 +50,7 @@ const Register = () => {
     return (
         <div className="register__container">
 
-
+            {/* 
             <div className="block p-6 mt-8 rounded-lg transition-down shadow-lg bg-white max-w-md direction-rtl ">
                 <form onSubmit={formik.handleSubmit}>
                     <p className="text-xl  mb-8 text-center px-10">قم بانشاء حساب جديد ودع الاخرين يرونك</p>
@@ -106,7 +112,7 @@ const Register = () => {
                     <ButtonSumit label={'انشاء حساب'} />
                 </form>
             </div>
-            {isloading && <Spinner />}
+            {isloading && <Spinner />} */}
         </div>
     );
 }

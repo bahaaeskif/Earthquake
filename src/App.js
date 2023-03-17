@@ -20,6 +20,7 @@ function App() {
 
       const { data } = await http.get("https://api.orhanaydogdu.com.tr/deprem/kandilli/live");
 
+
       if (data.httpStatus === 200) {
         setQuakes(data.result);
       }
